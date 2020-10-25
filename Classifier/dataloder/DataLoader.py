@@ -4,12 +4,29 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import cv2
+import pydicom as dicom
+from skimage import exposure
 
 class DataLoader:
     def __init__(self):
         print("dataloader")
 
-    def loadData(self,path = "data\Train"):
+    def loadData(self,path = "Classifier\data\Train"):
+        fileDir = os.path.dirname(os.path.realpath('__file__'))
+        data_path= os.path.join(fileDir, path)
+        filenames=os.listdir(data_path)
+        ds=dicom.dcmread(os.path.join( data_path , filenames[1]))
+        dcm_sample=ds.pixel_array
+        dcm_sample=exposure.equalize_adapthist(dcm_sample)
+        cv2.imshow('sample image dicom',dcm_sample)
+        cv2.waitkey()
+        
+        
+        x_train =  None
+        y_train =  None
+        return x_train,y_train 
+
+    def loadDataOld(self,path = "data\Train"):
         fileDir = os.path.dirname(os.path.realpath('__file__'))
         data_path= os.path.join(fileDir, path)
         filenames=os.listdir(data_path)

@@ -12,12 +12,14 @@ node_modules
 *.pyc
 __pycache__
 *.swp
-.vscode/
+#.vscode/
 cmake_build/
 tensorflow/contrib/cmake/_build/
 .idea/**
 /build/
 [Bb]uild/
+[Dd]ata/
+/data/
 /tensorflow/core/util/version_info.cc
 /tensorflow/python/framework/fast_tensor_util.cpp
 /tensorflow/lite/gen/**
@@ -31,10 +33,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# C extensions
+#  extensions
 *.so
 *.png
 *.jpg
+*.dcm
 # Distribution / packaging
 .Python
 build/
