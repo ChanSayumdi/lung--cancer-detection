@@ -1,0 +1,6 @@
+###### pip install -r requirements.txt ######`
+matplotlib 
+
+opencv-contrib-python==3.4.2.17
+opencv-python==3.4.2.17
+tensorflow==2.1.0
