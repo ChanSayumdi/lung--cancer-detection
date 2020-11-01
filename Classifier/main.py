@@ -8,12 +8,12 @@ from predict.predict import Predict
 def main():
     print("main")
     data = DataLoader()   
-    x_train,y_train = data.loadData("Classifier\data\Train\LIDC-IDRI-0001\\1.3.6.1.4.1.14519.5.2.1.6279.6001.298806137288633453246975630178")
-    # preprocessor = Preprocess()
-    # x_train,y_train = preprocessor.Preprocess(x_train,y_train)
+    x_train,y_train = data.loadData("Classifier\data\Train\SampleData")
+    preprocessor = Preprocess()
+    x_train,y_train = preprocessor.Preprocess(x_train,y_train)
     # model = Model()
     # train = Train( x_train,y_train,model)
-    # predict = Predict()
+    # predict = Predict() 
 
     
 
