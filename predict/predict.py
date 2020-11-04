@@ -15,6 +15,6 @@ class Predict:
 
 
     def predict(self):
-        model = tf.keras.models.load_model("Classifier\\build\\save")
+        model = tf.keras.models.load_model("\build\\save")
         prediction = model.predict([self.prepare('Classifier\\data\\realdata\\circle.jpg')])  # REMEMBER YOU'RE PASSING A LIST OF THINGS YOU WISH TO PREDICT
         print(prediction)
