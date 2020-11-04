@@ -12,7 +12,7 @@ class Model:
 
     def __init__(self):
         self.createModel()
-        with open("Classifier\models\model_10_14_2020\hyperP.json", "r") as f:
+        with open("models\model_10_14_2020\hyperP.json", "r") as f:
             self.config = json.load(f)
         
 

@@ -11,7 +11,7 @@ class DataLoader:
     def __init__(self):
         print("dataloader")
 
-    def loadData(self,path = "Classifier\data\Train"):
+    def loadData(self,path = "data\Train"):
         fileDir = os.path.dirname(os.path.realpath('__file__'))
         data_path= os.path.join(fileDir, path)
         filenames=os.listdir(data_path)
