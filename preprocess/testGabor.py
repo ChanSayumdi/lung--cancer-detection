@@ -32,7 +32,7 @@ def power(image, kernel):
         return np.sqrt(ndi.convolve(image, np.real(kernel), mode='wrap')**2 +
                     ndi.convolve(image, np.imag(kernel), mode='wrap')**2)
 
-def gabor():
+def gabor(image):
     # prepare filter bank kernels
     kernels = []
     for theta in range(4):
@@ -45,9 +45,9 @@ def gabor():
 
 
     shrink = (slice(0, None, 3), slice(0, None, 3))
-    brick = img_as_float(data.brick())[shrink]
-    grass = img_as_float(data.grass())[shrink]
-    gravel = img_as_float(data.gravel())[shrink]
+    brick = img_as_float(image)[shrink]
+    grass = img_as_float(image)[shrink]
+    gravel = img_as_float(image)[shrink]
     image_names = ('brick', 'grass', 'gravel')
     images = (brick, grass, gravel)
 
