@@ -43,7 +43,7 @@ class DataLoader:
         y_train =  None
         return x_train,y_train 
 
-    # def loadDataOld(self,path = "data\Train"):
+    # def loadDataOld(self,path = "data\train"):
     #     fileDir = os.path.dirname(os.path.realpath('__file__'))
     #     data_path= os.path.join(fileDir, path)
     #     filenames=os.listdir(data_path)
